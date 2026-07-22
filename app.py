@@ -10,7 +10,7 @@ if api_key:
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('gemini-1.5-flash-latest')
 else:
-    st.warning("Pehle API Key daalo: https://aistudio.google.com/app/apikey")
+    st.warning("Google AI API Key daalo", type="password")
     st.stop()
 
 SIGN_DICT = {"hand_up": "Hello", "fist": "Help", "two_fingers": "Thank You", "open_palm": "Yes"}
