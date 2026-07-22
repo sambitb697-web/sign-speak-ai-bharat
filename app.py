@@ -8,7 +8,7 @@ st.markdown("**NXTWAVE Hackathon Project** - Sign Language se baat karo, AI awaa
 api_key = st.text_input("Google AI API Key daalo", type="password")
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
 else:
     st.warning("Pehle API Key daalo: https://aistudio.google.com/app/apikey")
     st.stop()
