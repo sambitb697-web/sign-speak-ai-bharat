@@ -20,7 +20,7 @@ tab1, tab2 = st.tabs(["Sign to Voice", "Voice to Hindi"])
 with tab1:
     st.header("Sign se Hindi")
     img = st.camera_input("Camera on karke sign dikhao")
-      if img and st.button("Translate Sign"):
+    if img and st.button("Translate Sign"):
         prompt = "You are an expert in Indian Sign Language. Identify this hand gesture and reply with only 1 word in Hindi."
         image_parts = [{"mime_type": img.type, "data": img.getvalue()}]
         response = model.generate_content([prompt] + image_parts)
